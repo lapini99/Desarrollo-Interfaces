@@ -34,14 +34,10 @@ class Worker {
         this.age = value;
     }
 
-    static introduce() {
-        return "Hola, mi nombre es " + this.name + ", tengo " + this.age + " años," + " y mi DNI es: " + this.dni;
-    }
-
     createWorker() {
-        return "Nombre: " + this.name + "<br>"
-            + "Edad: " + this.age + "<br>"
-            + "DNI: " + this.dni + "<br>";
+        return `Nombre: ${this.name} <br>
+                Edad: ${this.age} <br>
+                DNI: ${this.dni}`;
     }
 }
 
@@ -62,16 +58,11 @@ class Boss extends Worker {
         this.section = value;
     }
 
-    introduce() {
-        return "Hola, mi nombre es " + this.name + ", tengo " + this.age + " años." + " Soy el jefe del sector: " + this.section +
-            " y mi DNI es: " + this.dni;
-    }
-
     createBoss() {
-        return "Nombre: " + this.name + "<br>"
-            + "Edad: " + this.age + "<br>"
-            + "DNI: " + this.dni + "<br>"
-            + "Sector: " + this.section + "<br>";
+        return `Nombre: ${this.name} <br>
+                Edad: ${this.age} <br>
+                DNI: ${this.dni} <br>
+                Sector: ${this.section}`;
     }
 }
 
@@ -91,23 +82,18 @@ class Autonomo extends Worker {
         this.id = value;
     }
 
-    introduce() {
-        return "Hola, mi nombre es " + this.name + ", tengo " + this.age + " años," + ", mi DNI es: " + this.dni
-            + ". Y mi número de autónomo es: " + this.id;
-    }
-
     createAutonomo() {
-        return "Nombre: " + this.name + "<br>"
-            + "Edad: " + this.age + "<br>"
-            + "DNI: " + this.dni + "<br>"
-            + "ID: " + this.id + "<br>";
+        return `Nombre: ${this.name} <br>
+                Edad: ${this.age} <br>
+                DNI: ${this.dni} <br>
+                ID: ${this.id}`;
     }
 }
 
 function bosses() {
 
     var visibility = document.getElementById("bosses");
-    
+
     if (visibility.style.display === "none") {
         visibility.style.display = "block";
     } else {
@@ -131,7 +117,7 @@ function bosses() {
 function autonomos() {
 
     var visibility = document.getElementById("autonomos");
-    
+
     if (visibility.style.display === "none") {
         visibility.style.display = "block";
     } else {
@@ -154,7 +140,7 @@ function autonomos() {
 function workers() {
 
     var visibility = document.getElementById("workers");
-    
+
     if (visibility.style.display === "none") {
         visibility.style.display = "block";
     } else {
