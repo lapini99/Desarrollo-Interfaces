@@ -91,6 +91,7 @@ class Autonomo extends Worker {
 }
 
 //TODO switch que activa los diferentes divs segun el tipo de trabajador que hayas clickado
+//Me parece algo bastante complejo. Lo miraré cuando no tenga tantas cosas que hacer
 
 function bosses() {
 
