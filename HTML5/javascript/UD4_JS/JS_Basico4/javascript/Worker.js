@@ -90,6 +90,8 @@ class Autonomo extends Worker {
     }
 }
 
+//TODO switch que activa los diferentes divs segun el tipo de trabajador que hayas clickado
+
 function bosses() {
 
     var visibility = document.getElementById("bosses");
@@ -105,10 +107,10 @@ function bosses() {
 
     var bossesArray = new Array(boss1, boss2);
 
-    let text = "<h2>JEFES</h2><br>";
+    let text = `<h2>JEFES</h2><br>`;
 
     bossesArray.forEach(boss => {
-        text += "<div class = 'boss'>" + boss.createBoss() + "</div>";
+        text += `<div class = 'boss'> ${boss.createBoss()} </div>`;
     });
 
     document.getElementById("bosses").innerHTML = text;
@@ -128,10 +130,10 @@ function autonomos() {
 
     var autonomosArray = new Array(aut1);
 
-    let text = "<h2>AUTÓNOMOS</h2><br>";
+    let text = `<h2>AUTÓNOMOS</h2><br>`;
 
     autonomosArray.forEach(autonomo => {
-        text += "<div class = 'autonomo'>" + autonomo.createAutonomo() + "</div>";
+        text += `<div class = 'autonomo'> ${autonomo.createAutonomo()} </div>`;
     });
 
     document.getElementById("autonomos").innerHTML = text;
@@ -153,10 +155,10 @@ function workers() {
 
     var workersArray = new Array(worker1, worker2, worker3);
 
-    let text = "<h2>TRABAJADORES</h2><br>";
+    let text = `<h2>TRABAJADORES</h2><br>`;
 
     workersArray.forEach(worker => {
-        text += "<div class = 'worker'>" + worker.createWorker() + "</div>";
+        text += `<div class = 'worker'> ${worker.createWorker()} </div>`;
     });
 
     document.getElementById("workers").innerHTML = text;
